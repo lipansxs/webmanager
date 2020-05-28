@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+div.login-painer{
+    display: none;
+    width: 300px;
+    height: 400px;
+    margin-top: 20%;
+    margin-left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 15px red;
+    border-radius: 15px;
+}
+
+.login-painer .container{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.container input{
+    background-color: transparent;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: block;
+    width: 80%;
+    height: 30px;
+    margin: 0px auto;
+    position: absolute;
+    top: 100px;
+    left: 10%;
+}
+
+.container .title::before{
+    content: "\767b\5165\9762\677f";
+    font-size: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: initial;
+    text-shadow: 1px 1px 2px black;
+}
+
+.container .username{
+    top: 30%;
+    border: none;
+    border-bottom: 1px solid black;
+    text-transform: uppercase;
+    outline: none;
+
+}
+
+.container .username:focus::placeholder{
+    color: transparent;
+}
+
+.container .password{
+    top: 45%;
+    border: none;
+    border-bottom: .5px solid black;
+    text-transform: uppercase;
+    outline: none;
+}
+
+.container .login{
+    font-family: initial;
+    font-size: 25px;
+    top: 60%;
+    left: 10%;
+    width: 80%;
+    height: 50px;
+    border-radius: 10px;
+    background-color: blue;
+    outline: none;
+}
+
+.container .loss-pwd{
+    display: block;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    position: absolute;
+    top: 86%;
+    text-align: center;
+}
+
+.container .loss-pwd a{
+    text-decoration: none;
+}

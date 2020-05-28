@@ -1,0 +1,49 @@
+INFO 2020-05-17 17:07:14 com.sxs.mapper.UserMapper 262 查询用户：张三是否已经删除！ 
+ERROR 2020-05-17 17:07:14 com.sxs.mapper.UserMapper 275 查询用户：张三是否被删除失败，因为该用户不存在 
+INFO 2020-05-17 17:07:14 com.sxs.mapper.UserMapper 287 查询用户：张三是否被删除成功！ 
+INFO 2020-05-17 17:07:14 com.sxs.mapper.UserMapper 58 正在增加用户：User{id=0, name='张三', pwd='123456'} 
+INFO 2020-05-17 17:07:14 com.sxs.mapper.UserMapper 68 User{id=0, name='张三', pwd='123456'}增加成功！ 
+INFO 2020-05-17 21:40:09 com.sxs.mapper.UserMapper 252 查询用户：张三是否已经删除！ 
+INFO 2020-05-17 21:40:09 com.sxs.mapper.UserMapper 270 查询用户：张三是否被删除成功！ 
+INFO 2020-05-17 21:40:09 com.sxs.mapper.UserMapper 56 正在增加用户：User{id=0, name='张三', pwd='123456'} 
+INFO 2020-05-17 21:40:09 com.sxs.mapper.UserMapper 66 User{id=0, name='张三', pwd='123456'}增加成功！ 
+INFO 2020-05-17 21:40:41 com.sxs.mapper.UserMapper 89 正在删除id = 6的用户！ 
+INFO 2020-05-17 21:51:32 com.sxs.mapper.UserMapper 92 正在删除id = 6的用户！ 
+INFO 2020-05-17 21:51:32 com.sxs.mapper.UserMapper 100 id = 6的用户删除成功 
+INFO 2020-05-17 21:51:37 com.sxs.mapper.UserMapper 123 正在删除用户名为：张三的用户 
+INFO 2020-05-17 21:51:37 com.sxs.mapper.UserMapper 131 用户名为：张三的用户删除成功！ 
+INFO 2020-05-17 21:51:45 com.sxs.mapper.UserMapper 156 正在更新id为：6的用户为：User{id=6, name='赵六', pwd='456356734'} 
+INFO 2020-05-17 21:51:45 com.sxs.mapper.UserMapper 165 id为:6更新成功！ 
+INFO 2020-05-17 21:51:51 com.sxs.mapper.UserMapper 193 正在查询id为：6的用户！ 
+INFO 2020-05-17 21:51:51 com.sxs.mapper.UserMapper 202 id为：6的用户查询成功 
+INFO 2020-05-17 21:52:01 com.sxs.mapper.UserMapper 221 正在查询用户名为：赵六的用户 
+INFO 2020-05-17 21:52:01 com.sxs.mapper.UserMapper 235 用户名为：赵六的用户查询成功！ 
+INFO 2020-05-17 21:52:05 com.sxs.mapper.UserMapper 255 查询用户：赵六是否已经删除！ 
+INFO 2020-05-17 21:52:05 com.sxs.mapper.UserMapper 273 查询用户：赵六是否被删除成功！ 
+INFO 2020-05-17 21:56:46 com.sxs.mapper.UserMapper 255 查询用户：lip是否已经删除！ 
+ERROR 2020-05-17 21:56:46 com.sxs.mapper.UserMapper 268 查询用户：lip是否被删除失败，因为该用户不存在 
+INFO 2020-05-17 21:56:46 com.sxs.mapper.UserMapper 273 查询用户：lip是否被删除成功！ 
+INFO 2020-05-17 21:56:46 com.sxs.mapper.UserMapper 221 正在查询用户名为：lip的用户 
+ERROR 2020-05-17 21:56:46 com.sxs.mapper.UserMapper 229 用户名为：lip的用户查询失败！因为用户不存在 
+INFO 2020-05-17 21:56:46 com.sxs.mapper.UserMapper 235 用户名为：lip的用户查询成功！ 
+INFO 2020-05-17 21:58:59 com.sxs.mapper.UserMapper 221 正在查询用户名为：李四的用户 
+ERROR 2020-05-17 21:58:59 com.sxs.mapper.UserMapper 229 用户名为：李四的用户查询失败！因为用户不存在 
+INFO 2020-05-17 21:58:59 com.sxs.mapper.UserMapper 235 用户名为：李四的用户查询成功！ 
+INFO 2020-05-17 21:58:59 com.sxs.mapper.UserMapper 255 查询用户：李四是否已经删除！ 
+ERROR 2020-05-17 21:58:59 com.sxs.mapper.UserMapper 268 查询用户：李四是否被删除失败，因为该用户不存在 
+INFO 2020-05-17 21:58:59 com.sxs.mapper.UserMapper 273 查询用户：李四是否被删除成功！ 
+INFO 2020-05-17 21:58:59 com.sxs.mapper.UserMapper 221 正在查询用户名为：李四的用户 
+ERROR 2020-05-17 21:58:59 com.sxs.mapper.UserMapper 229 用户名为：李四的用户查询失败！因为用户不存在 
+INFO 2020-05-17 21:58:59 com.sxs.mapper.UserMapper 235 用户名为：李四的用户查询成功！ 
+INFO 2020-05-17 21:58:59 com.sxs.mapper.UserMapper 59 正在增加用户：User{id=0, name='李四', pwd='654321'} 
+INFO 2020-05-17 21:58:59 com.sxs.mapper.UserMapper 69 User{id=0, name='李四', pwd='654321'}增加成功！ 
+INFO 2020-05-17 21:59:21 com.sxs.mapper.UserMapper 255 查询用户：李四是否已经删除！ 
+INFO 2020-05-17 21:59:21 com.sxs.mapper.UserMapper 273 查询用户：李四是否被删除成功！ 
+INFO 2020-05-17 21:59:21 com.sxs.mapper.UserMapper 123 正在删除用户名为：李四的用户 
+INFO 2020-05-17 21:59:21 com.sxs.mapper.UserMapper 131 用户名为：李四的用户删除成功！ 
+INFO 2020-05-17 22:00:50 com.sxs.mapper.UserMapper 156 正在更新id为：0的用户为：User{id=0, name='张三', pwd='lipanre'} 
+INFO 2020-05-17 22:00:50 com.sxs.mapper.UserMapper 165 id为:0更新成功！ 
+INFO 2020-05-17 22:02:16 com.sxs.mapper.UserMapper 156 正在更新id为：7的用户为：User{id=7, name='张三', pwd='lipanre'} 
+INFO 2020-05-17 22:02:16 com.sxs.mapper.UserMapper 165 id为:7更新成功！ 
+INFO 2020-05-17 22:04:18 com.sxs.mapper.UserMapper 221 正在查询用户名为：张三的用户 
+INFO 2020-05-17 22:04:18 com.sxs.mapper.UserMapper 235 用户名为：张三的用户查询成功！ 
