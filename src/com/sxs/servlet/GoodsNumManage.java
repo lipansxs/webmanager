@@ -81,13 +81,8 @@ public class GoodsNumManage extends HttpServlet {
             }
         }
 
-
-
-
         // 默认情况下查询所有的货号数据
         req.setAttribute("goodsnums", service.selAllGoodsNum());
-
-
         try {
             req.getRequestDispatcher("/goodsnummanage.jsp").forward(req, resp);
             return;

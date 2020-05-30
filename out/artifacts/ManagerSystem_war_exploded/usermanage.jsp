@@ -5,6 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="<%= request.getContextPath()%>/js/jquery-3.4.1.js"></script>
     <link rel="stylesheet" type="text/css" href="http://www.jq22.com/jquery/bootstrap-3.3.4.css">
     <link rel="stylesheet" href= "<%=request.getContextPath()%>/css/indexstyle.css">
     <link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/css/managestyle.css">
@@ -13,10 +14,38 @@
 </head>
 <body>
 
+    <%--警告信息--%>
+    <div class="container">
+        <div class="col-md-10 col-md-offset-1" style="position: relative">
+            <div class="alert alert-warning  alert-dismissible fade in" role="alert">
+                <%--                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>--%>
+                <strong>提示</strong> &nbsp; <span id="msg-danger"></span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        $(function () {
+            $(".alert").hide().slideUp("fast");
+        });
+
+        // 封装一个函数，用来显示提示信息，1秒后自动消失
+        function showMsg(msg){
+            $(".alert").slideToggle("normal", function () {
+                setTimeout(function(){
+                    $(".alert").slideToggle("normal");
+                }, 1000)
+            }).find("#msg-danger").text(msg);
+
+        }
+
+    </script>
+
     <!-- 包含顶部按钮网页 -->
     <jsp:include page="/baseModule/top.jsp"></jsp:include>
 
-    <div class="container">
+    <div class="container main">
         <div class="row">
             <div class="col-md-10 col-md-offset-1">
                 <div class="search-add bg-success">
@@ -45,6 +74,20 @@
                             <button type="submit" class="btn btn-primary">搜索</button>
                         </form>
                     </div>
+
+                    <script>
+                        $(function () {
+                            let form  = $(".search form");
+                            form.find("button[type=submit]").click(function(){
+                                let type = $(this).prev("div").find("input[type=text]");
+                                if (type.val().length == 0 || "" == type.val()) {
+                                    showMsg("请输入搜索内容！");
+                                    return false;
+                                }
+                            });
+                        });
+                    </script>
+
                     <button type="button" class="btn btn-success add-btn" data-toggle="modal" data-target="#adduser" >增加用户</button>
 
                     <div class="modal fade" id="adduser" tabindex="-1" role="dialog" aria-labelledby="addusermodaltitle">
@@ -67,6 +110,11 @@
                                                 <input type="password" class="form-control" id="user-password" name="pwd"></input>
                                             </div>
 
+                                            <div class="form-group">
+                                                <label for="user-password" class="control-label">确认密码</label>
+                                                <input type="password" class="form-control" id="confirm-user-password" name="pwd"></input>
+                                            </div>
+
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
@@ -79,6 +127,42 @@
                         </div>
                     </div>
 
+                    <script>
+                        // 添加模态框验证代码
+                        $(function () {
+                            $(".add-btn").click(function(){
+                                let form = $("#adduser form");
+
+                                form.find(".modal-footer input[type=submit]").unbind("click").click(function () {
+
+                                    if (form.find("#user-name").val().length == 0) {
+                                        showMsg("请输入用户名！");
+                                        return false;
+                                    }
+
+                                    if (form.find("#user-password").val().length == 0) {
+                                        showMsg("请输入密码！");
+                                        return false;
+                                    }
+
+                                    if (form.find("#confirm-user-password").val().length == 0) {
+                                        showMsg("请输入确认密码!")
+                                        return false;
+                                    }
+
+
+                                    let pwd = form.find(".modal-body .form-group #user-password").val();
+                                    let confirmPwd = form.find(".modal-body .form-group #confirm-user-password").val();
+
+                                    if (pwd != confirmPwd) {
+                                        showMsg("确认密码与密码不符！");
+                                        return false;
+                                    }
+                                });
+                            });
+                        });
+                    </script>
+
                 </div>
             </div>
         </div>
@@ -86,7 +170,7 @@
         <div class="row">
             <div class="col-md-10 col-md-offset-1 users-tb">
 
-                <table class="table table-hover table-bordered">
+                <table class="table table-hover table-bordered table-striped">
                     <thead>
                     <tr>
                         <td class="col-md-3">用户编号</td>
@@ -104,7 +188,7 @@
                                     <!-- 编辑删除按钮 -->
                                     <div class="option hidden">
                                         <a href="#" class="btn btn-primary btn-xs active" data-toggle="modal" data-target="#updmodal" role="button"><span class="hidden">${selUser.id}</span>编辑</a>
-                                        <a href="<%= request.getContextPath()%>/usermanage/del?id=${user.id}" class="btn btn-danger btn-xs active" role="button">删除</a>
+                                        <a href="/usermanage/del?id=${user.id}" class="btn btn-danger btn-xs active delete-btn" data-toggle="modal" data-target=".bs-example-modal-sm" role="button">删除</a>
                                     </div>
                                 </td>
                             </tr>
@@ -120,13 +204,39 @@
                                         <!-- 编辑删除按钮 -->
                                         <div class="option hidden">
                                             <a href="#" class="btn btn-primary btn-xs active" data-toggle="modal" data-target="#updmodal" role="button"><span class="hidden">${user.id}</span>编辑</a>
-                                            <a href="<%= request.getContextPath()%>/usermanage/del?id=${user.id}" class="btn btn-danger btn-xs active" role="button">删除</a>
+                                            <a href="/usermanage/del?id=${user.id}" class="btn btn-danger btn-xs active delete-btn" data-toggle="modal" data-target=".bs-example-modal-sm" role="button">删除</a>
                                         </div>
                                     </td>
                                 </tr>
 
                             </c:forEach>
                         </c:if>
+
+                        <%--点击删除弹出的模态框--%>
+                        <div class="modal fade bs-example-modal-sm" id="del-modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+                            <div class="modal-dialog modal-sm" role="document">
+                                <div class="modal-content" style="text-align: center">
+                                    <h1 style="color: black">确定删除？</h1>
+
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-success" data-dismiss="modal">取消</button>
+                                        <a type="button" class="btn btn-danger confirm-del active" role="button">确定删除</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <script type="text/javascript">
+                            $(function () {
+                                $(".users-tb tbody tr .option a:nth-child(2)").click(function () {
+                                    let url = $(this).attr("href");
+                                    let modal = $("#del-modal .modal-content");
+                                    modal.find(".confirm-del").click(function(){
+                                        $(this).attr("href", "/ManageSystem" + url);
+                                    });
+                                });
+                            });
+                        </script>
 
                         <div class="modal fade" id="updmodal" tabindex="-1" role="dialog" aria-labelledby="updmodaltitle">
                             <div class="modal-dialog" role="document">
@@ -144,9 +254,42 @@
 
                                             <%--设置编辑的数据的id--%>
                                             <script type="text/javascript">
-                                                $(".users-tb tbody tr .option a:first-child").click(function () {
-                                                    let id = $(this).find("span").text();
-                                                    $("#updmodal .modal-body .form-group:first input").val(id);
+                                                $(function () {
+                                                    $(".users-tb tbody tr .option a:first-child").click(function () {
+                                                        let id = $(this).find("span").text();
+                                                        $("#updmodal .modal-body .form-group:first input").val(id);
+
+                                                        $("#updmodal .modal-footer input[type=submit]").unbind("click").click(function () {
+                                                            let formGroup = $("#updmodal .modal-body .form-group");
+
+                                                            if (formGroup.find("#upd-name").val().length == 0) {
+                                                                showMsg("请输入用户名！")
+                                                                return false;
+                                                            }
+
+                                                            let pwd = formGroup.find("#upd-pwd").val();
+                                                            let confirmPwd = formGroup.find("#upd-confirm-pwd").val();
+
+                                                            if (pwd.length == 0) {
+                                                                showMsg("请输入密码!");
+                                                                return false;
+                                                            }
+
+                                                            if (confirmPwd.length == 0) {
+                                                                showMsg("请输入确认密码");
+                                                                return false;
+                                                            }
+
+                                                            if (pwd != confirmPwd) {
+                                                                showMsg("密码与确认密码不一致！");
+                                                                return false;
+                                                            }
+
+
+
+                                                        });
+
+                                                    });
                                                 });
 
                                             </script>

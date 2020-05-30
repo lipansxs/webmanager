@@ -27,12 +27,12 @@
                   </ul>
                 </li>
                 
-                 <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-tasks"></i> 辅助管理 <span class="caret"></span></a>
-                  <ul class="dropdown-menu" role="menu">
-                    <li><a href="#"><i class="glyphicon glyphicon-wrench"></i>修改密码</a></li>
-                  </ul>
-                </li>
+<%--                 <li class="dropdown">--%>
+<%--                  <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-tasks"></i> 辅助管理 <span class="caret"></span></a>--%>
+<%--                  <ul class="dropdown-menu" role="menu">--%>
+<%--                    <li><a href="#"><i class="glyphicon glyphicon-wrench"></i>修改密码</a></li>--%>
+<%--                  </ul>--%>
+<%--                </li>--%>
                 
             </ul>
         </nav>

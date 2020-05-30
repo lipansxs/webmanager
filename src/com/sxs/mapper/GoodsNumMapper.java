@@ -108,14 +108,16 @@ public class GoodsNumMapper {
             }
         }, (rowSet)->{
             GoodsNum goodsNum_obj = null;
+            if (rowSet.size() > 0){
 
-            try {
-                goodsNum_obj = new GoodsNum(rowSet.getInt("id"), rowSet.getString("goodsnum"));
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }finally {
-                JDBCUtil.close(rowSet);
-            }
+               try {
+                   goodsNum_obj = new GoodsNum(rowSet.getInt("id"), rowSet.getString("goodsnum"));
+               } catch (SQLException e) {
+                   e.printStackTrace();
+               }finally {
+                   JDBCUtil.close(rowSet);
+               }
+           }
             // 最后返回这个货号对象
             return goodsNum_obj;
         });

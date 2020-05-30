@@ -5,6 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="<%= request.getContextPath()%>/js/jquery-3.4.1.js"></script>
     <link rel="stylesheet" type="text/css" href="http://www.jq22.com/jquery/bootstrap-3.3.4.css">
     <link rel="stylesheet" href= "<%=request.getContextPath()%>/css/indexstyle.css">
     <link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/css/managestyle.css">
@@ -12,6 +13,34 @@
 
 </head>
 <body>
+
+    <%--警告信息--%>
+    <div class="container main">
+        <div class="col-md-10 col-md-offset-1" style="position: relative">
+            <div class="alert alert-warning  alert-dismissible fade in" role="alert">
+                <%--                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>--%>
+                <strong>提示</strong> &nbsp; <span id="msg-danger"></span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        $(function () {
+            $(".alert").hide().slideUp("fast");
+        });
+
+        // 封装一个函数，用来显示提示信息，1秒后自动消失
+        function showMsg(msg){
+            $(".alert").slideToggle("normal", function () {
+                setTimeout(function(){
+                    $(".alert").slideToggle("normal");
+                }, 1000)
+            }).find("#msg-danger").text(msg);
+
+        }
+
+    </script>
 
     <!-- 包含顶部按钮网页 -->
     <jsp:include page="/baseModule/top.jsp"></jsp:include>
@@ -33,6 +62,17 @@
                             <button type="submit" class="btn btn-primary">搜索</button>
                         </form>
                     </div>
+
+                    <script>
+                        $(function () {
+                            $(".search button").click(function () {
+                                if ($(this).prev("div").find("input[type=text]").val().length == 0){
+                                    showMsg("请输入搜索内容");
+                                    return false;
+                                }
+                            });
+                        });
+                    </script>
 
                     <button type="button" class="btn btn-success add-btn" data-toggle="modal" data-target="#addInOrder" style="margin-left: 530px">增加入库单</button>
 
@@ -95,13 +135,62 @@
 
                     </div>
                 </div>
+
+                <script>
+                    $(function () {
+                        $(".search-add .add-btn").click(function () {
+
+                            $("#addInOrder .modal-footer input").unbind("click").click(function () {
+
+                                let modalBody = $("#addInOrder .modal-body");
+
+                                if (modalBody.find("#goods-name").val().length == 0) {
+                                    showMsg("请输入商品名");
+                                    return false;
+                                }
+
+                                if (modalBody.find("#goods-id").val().length == 0) {
+                                    showMsg("请输入货号id");
+                                    return false;
+                                }
+
+                                if (modalBody.find("#in-count").val().length == 0) {
+                                    showMsg("请输入进货数目");
+                                    return false;
+                                }
+
+                                if (modalBody.find("#true-in-count").val().length == 0) {
+                                    showMsg("请输入实际进货数");
+                                    return false;
+                                }
+
+                                if (modalBody.find("#goods-price").val().length == 0) {
+                                    showMsg("请输入单价");
+                                    return false;
+                                }
+
+                                if (modalBody.find("#goods-buy").val().length == 0) {
+                                    showMsg("请输入买方");
+                                    return false;
+                                }
+
+                                if (modalBody.find("#goods-sale").val().length == 0) {
+                                    showMsg("请输入卖方");
+                                    return false;
+                                }
+
+                            });
+
+                        });
+                    });
+                </script>
             </div>
         </div>
 
         <div class="row">
             <div class="col-md-10 col-md-offset-1 inorder-detail-tb">
 
-                <table class="table table-hover table-bordered">
+                <table class="table table-hover table-bordered  table-striped">
                     <thead>
                     <tr>
                         <td class="col-md-1">商品编号</td>
@@ -183,6 +272,47 @@
                                             $(".inorder-detail-tb tbody tr .option a:first-child").click(function () {
                                                 let id = $(this).find("span").text();
                                                 $("#updmodal .modal-body .form-group:first input").val(id);
+
+                                                $("#updmodal .modal-footer input").click(function () {
+                                                    let modalBody = $("#updmodal .modal-body");
+
+                                                    if (modalBody.find("#upd-goods-name").val().length == 0) {
+                                                        showMsg("请输入商品名");
+                                                        return false;
+                                                    }
+
+                                                    if (modalBody.find("#upd-goods-id").val().length == 0) {
+                                                        showMsg("请输入货号id");
+                                                        return false;
+                                                    }
+
+                                                    if (modalBody.find("#upd-in-count").val().length == 0) {
+                                                        showMsg("请输入进货数目");
+                                                        return false;
+                                                    }
+
+                                                    if (modalBody.find("#upd-true-in-count").val().length == 0) {
+                                                        showMsg("请输入实际进货数目");
+                                                        return false;
+                                                    }
+
+                                                    if (modalBody.find("#upd-goods-price").val().length == 0) {
+                                                        showMsg("请输入单价");
+                                                        return false;
+                                                    }
+
+                                                    if (modalBody.find("#upd-goods-buy").val().length == 0) {
+                                                        showMsg("请输入买方");
+                                                        return false;
+                                                    }
+
+                                                    if (modalBody.find("#upd-goods-sale").val().length == 0) {
+                                                        showMsg("亲输入卖方");
+                                                        return false;
+                                                    }
+
+                                                });
+
                                             });
 
                                         </script>
