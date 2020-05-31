@@ -57,7 +57,13 @@ public class OutOrderManage extends HttpServlet {
         }
 
         // 默认情况下查询所有的出库单详情
-        req.setAttribute("outOrders", service.selAllOutOrder());
+//        req.setAttribute("outOrders", service.selAllOutOrder());
+
+        int pageIndex = 1;
+        if (null != req.getParameter("pageIndex")) {
+            pageIndex = (int)Double.parseDouble(req.getParameter("pageIndex"));
+        }
+        req.setAttribute("pageInfo", service.selOutOrderWithPageIndex(pageIndex));
 
         try {
             req.getRequestDispatcher("/outorderInfo.jsp").forward(req, resp);

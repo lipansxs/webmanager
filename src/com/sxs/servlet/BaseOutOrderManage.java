@@ -63,8 +63,13 @@ public class BaseOutOrderManage extends HttpServlet {
         }
 
         // 默认情况下查询所有出库单基本信息
-        req.setAttribute("outOrderBases", service.selAllBaseOutOrder());
+//        req.setAttribute("outOrderBases", service.selAllBaseOutOrder());
 
+        int pageIndex = 1;
+        if (null != req.getParameter("pageIndex")) {
+            pageIndex = (int)Double.parseDouble(req.getParameter("pageIndex"));
+        }
+        req.setAttribute("pageInfo", service.selBaseOutOrderWithPageIndex(pageIndex));
 
         try {
             req.getRequestDispatcher("/outorderbase.jsp").forward(req, resp);

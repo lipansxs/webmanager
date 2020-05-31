@@ -1,6 +1,7 @@
-package com.sxs.serviceImpl;
+package com.sxs.serviceInf;
 
 import com.sxs.pojo.GoodsNum;
+import com.sxs.pojo.PageInfo;
 
 import java.util.List;
 
@@ -35,4 +36,9 @@ public interface GoodsNumServiceInf {
      * 查询所有货号
      */
     public List<GoodsNum> selAllGoodsNum();
+
+    /**
+     * 通过页面当前页面数来查询
+     */
+    public PageInfo<GoodsNum> selWithPageIndex(int pageIndex);
 }

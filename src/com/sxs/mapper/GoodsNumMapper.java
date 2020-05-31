@@ -1,6 +1,7 @@
 package com.sxs.mapper;
 
 import com.sxs.pojo.GoodsNum;
+import com.sxs.pojo.PageInfo;
 import com.sxs.util.JDBCUtil;
 
 import java.sql.SQLException;
@@ -181,6 +182,57 @@ public class GoodsNumMapper {
             return isDel;
         });
 
+    }
+
+    /**
+     * 通过分页查询数据,默认每页显示5条数据
+     */
+    public PageInfo<GoodsNum> selWithPageIndex(int pageIndex){
+        PageInfo<GoodsNum> pageInfo = new PageInfo<>();
+        pageInfo.setPageIndex(pageIndex);
+
+        // 设置页面信息的总的页数
+        // 如果总的页面数是0，就查询数据库
+        if (pageInfo.getTotalPageCount() == 0) {
+            pageInfo.setTotalPageCount(SQLOption.selOption("select count(*) from goodsnum_tb", null, null, (rowSet)->{
+                double dataCount = 0;
+                try {
+                    dataCount = rowSet.getInt(1);
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }finally {
+                    JDBCUtil.close(rowSet);
+                }
+                return Math.ceil(dataCount/pageInfo.getPageSize());
+            }));
+        }
+
+        return SQLOption.selOption("select * from goodsnum_tb limit ?, ?", pageInfo, (ps, page)->{
+
+            try {
+                ps.setInt(1, page.getPageBegin());
+                ps.setInt(2, page.getPageSize());
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }, (rowSet)->{
+            try {
+                rowSet.beforeFirst();
+
+                while (rowSet.next()) {
+                     GoodsNum goodsNum = new GoodsNum();
+                     goodsNum.setId(rowSet.getInt("id"));
+                     goodsNum.setGoodsNum(rowSet.getString("goodsnum"));
+                     pageInfo.addPageConent(goodsNum);
+                }
+
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }finally {
+                JDBCUtil.close(rowSet);
+            }
+            return pageInfo;
+        });
     }
 
 }

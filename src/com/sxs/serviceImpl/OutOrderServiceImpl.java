@@ -3,6 +3,7 @@ package com.sxs.serviceImpl;
 import com.sxs.mapper.OutOrderMapper;
 import com.sxs.pojo.BaseOutOrder;
 import com.sxs.pojo.OutOrderInfo;
+import com.sxs.pojo.PageInfo;
 import com.sxs.serviceInf.OutOrderServiceInf;
 
 import java.util.List;
@@ -49,5 +50,17 @@ public class OutOrderServiceImpl implements OutOrderServiceInf {
     @Override
     public BaseOutOrder selBaseOutOrderById(BaseOutOrder baseOutOrder) {
         return mapper.selBaseOutOrderById(baseOutOrder);
+    }
+
+    @Override
+    public PageInfo<BaseOutOrder> selBaseOutOrderWithPageIndex(int pageIndex) {
+        return mapper.selBaseOutOrderWithPageIndex(pageIndex);
+    }
+
+    /**
+     * 分页查询出库单详情
+     */
+    public PageInfo<OutOrderInfo> selOutOrderWithPageIndex(int pageIndex){
+        return mapper.selOutOrderWithPageIndex(pageIndex);
     }
 }

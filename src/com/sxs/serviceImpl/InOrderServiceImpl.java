@@ -3,6 +3,7 @@ package com.sxs.serviceImpl;
 import com.sxs.mapper.InOrderMapper;
 import com.sxs.pojo.BaseInOrder;
 import com.sxs.pojo.InOrderInfo;
+import com.sxs.pojo.PageInfo;
 import com.sxs.serviceInf.InOrderServiceInf;
 
 import java.util.List;
@@ -44,6 +45,16 @@ public class InOrderServiceImpl implements InOrderServiceInf {
     @Override
     public List<BaseInOrder> selAllBaseInOrder() {
         return mapper.selAllBaseInOrder();
+    }
+
+    @Override
+    public PageInfo<BaseInOrder> selBaseInOrderWithPageIndex(int pageIndex) {
+        return mapper.selBaseInOrderWithPageIndex(pageIndex);
+    }
+
+    @Override
+    public PageInfo<InOrderInfo> selInOrderWithPageIndex(int pageIndex) {
+        return mapper.selInOrderWithPageIndex(pageIndex);
     }
 
     @Override

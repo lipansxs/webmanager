@@ -2,6 +2,8 @@ package com.sxs.serviceImpl;
 
 import com.sxs.mapper.GoodsNumMapper;
 import com.sxs.pojo.GoodsNum;
+import com.sxs.pojo.PageInfo;
+import com.sxs.serviceInf.GoodsNumServiceInf;
 
 import java.util.List;
 
@@ -42,5 +44,10 @@ public class GoodsNumServiceImpl implements GoodsNumServiceInf {
     @Override
     public List<GoodsNum> selAllGoodsNum() {
         return mapper.selAll();
+    }
+
+    @Override
+    public PageInfo<GoodsNum> selWithPageIndex(int pageIndex) {
+        return mapper.selWithPageIndex(pageIndex);
     }
 }

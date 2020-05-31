@@ -2,6 +2,7 @@ package com.sxs.serviceImpl;
 
 import com.sxs.constant.Constant;
 import com.sxs.mapper.UserMapper;
+import com.sxs.pojo.PageInfo;
 import com.sxs.pojo.User;
 import com.sxs.serviceInf.UserServiceInf;
 
@@ -83,6 +84,11 @@ public class UserServiceImpl implements UserServiceInf {
     @Override
     public List<User> selAll() {
         return userMapper.selAllUser();
+    }
+
+    @Override
+    public PageInfo<User> selWithPageIndex(int pageIndex) {
+        return userMapper.selWithPageIndex(pageIndex);
     }
 
 }

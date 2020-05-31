@@ -1,7 +1,9 @@
 package com.sxs.mapper;
 
 import com.sxs.pojo.BaseOutOrder;
+import com.sxs.pojo.InOrderInfo;
 import com.sxs.pojo.OutOrderInfo;
+import com.sxs.pojo.PageInfo;
 import com.sxs.util.JDBCUtil;
 
 import java.sql.PreparedStatement;
@@ -58,6 +60,63 @@ public class OutOrderMapper {
             return orders;
         });
     }
+
+    /**
+     * 分页查询
+     */
+    public PageInfo<BaseOutOrder> selBaseOutOrderWithPageIndex(int pageIndex){
+        PageInfo<BaseOutOrder> pageInfo = new PageInfo<>();
+        pageInfo.setPageIndex(pageIndex);
+
+        // 设置页面信息的总的页数
+        // 如果总的页面数是0，就查询数据库
+        if (pageInfo.getTotalPageCount() == 0) {
+            // 设置总的页数
+            pageInfo.setTotalPageCount(SQLOption.selOption("select count(*) from outorder_tb", null, null, (rowSet)->{
+                double dataCount = 0;
+                try {
+                    dataCount = rowSet.getInt(1);
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }finally {
+                    JDBCUtil.close(rowSet);
+                }
+                return Math.ceil(dataCount/pageInfo.getPageSize());
+            }));
+        }
+
+        return SQLOption.selOption("select * from outorder_tb limit ?, ?", pageInfo, (ps, page)->{
+
+            try {
+                ps.setInt(1, page.getPageBegin());
+                ps.setInt(2, page.getPageSize());
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }, (rowSet)->{
+            try {
+                rowSet.beforeFirst();
+
+                while (rowSet.next()) {
+                    BaseOutOrder order = new BaseOutOrder();
+                    order.setId(rowSet.getInt("id"));
+                    order.setCount(rowSet.getInt("count"));
+                    order.setTotalPrice(rowSet.getDouble("totalprice"));
+                    order.setGoodsName(rowSet.getString("goodsname"));
+
+                    pageInfo.addPageConent(order);
+                }
+
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }finally {
+                JDBCUtil.close(rowSet);
+            }
+            return pageInfo;
+        });
+    }
+
+
 
     /**
      * 通过id查询基本出库单
@@ -194,6 +253,69 @@ public class OutOrderMapper {
                 JDBCUtil.close(rowSet);
             }
             return orders;
+        });
+    }
+
+    /**
+     * 分页查询出库单详情
+     */
+    public PageInfo<OutOrderInfo> selOutOrderWithPageIndex(int pageIndex){
+        PageInfo<OutOrderInfo> pageInfo = new PageInfo<>();
+        pageInfo.setPageIndex(pageIndex);
+
+        // 设置页面信息的总的页数
+        // 如果总的页面数是0，就查询数据库
+        if (pageInfo.getTotalPageCount() == 0) {
+            // 设置总的页数
+            pageInfo.setTotalPageCount(SQLOption.selOption("select count(*) from outorder_tb", null, null, (rowSet)->{
+                double dataCount = 0;
+                try {
+                    dataCount = rowSet.getInt(1);
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }finally {
+                    JDBCUtil.close(rowSet);
+                }
+                return Math.ceil(dataCount/pageInfo.getPageSize());
+            }));
+        }
+
+        return SQLOption.selOption("select * from outorder_tb limit ?, ?", pageInfo, (ps, page)->{
+
+            try {
+                ps.setInt(1, page.getPageBegin());
+                ps.setInt(2, page.getPageSize());
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }, (rowSet)->{
+            try {
+                // 把游标移动到第一行数据前面
+                rowSet.beforeFirst();
+
+                while (rowSet.next()) {
+                    OutOrderInfo order = new OutOrderInfo();
+
+                    order.setId(rowSet.getInt("id"));
+                    order.setGoodsNumId(rowSet.getInt("goodsnumid"));
+                    order.setCount(rowSet.getInt("count"));
+                    order.setPrice(rowSet.getDouble("price"));
+                    order.setTotalPrice(rowSet.getDouble("totalprice"));
+                    order.setSale(rowSet.getString("sale"));
+                    order.setBuy(rowSet.getString("buy"));
+                    order.setTime(rowSet.getString("time"));
+                    order.setGoodsName(rowSet.getString("goodsname"));
+
+                    pageInfo.addPageConent(order);
+
+                }
+
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }finally {
+                JDBCUtil.close(rowSet);
+            }
+            return pageInfo;
         });
     }
 

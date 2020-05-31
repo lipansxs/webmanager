@@ -2,6 +2,8 @@ package com.sxs.serviceInf;
 
 import com.sxs.pojo.BaseInOrder;
 import com.sxs.pojo.InOrderInfo;
+import com.sxs.pojo.PageInfo;
+import com.sxs.pojo.User;
 
 import java.util.List;
 
@@ -52,6 +54,13 @@ public interface InOrderServiceInf {
      * @return
      */
     public List<BaseInOrder> selAllBaseInOrder();
+
+    /**
+     * 通过页面当前页面数来查询
+     */
+    public PageInfo<BaseInOrder> selBaseInOrderWithPageIndex(int pageIndex);
+
+    public PageInfo<InOrderInfo> selInOrderWithPageIndex(int pageIndex);
 
     /**
      *

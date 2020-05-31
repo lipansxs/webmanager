@@ -7,24 +7,45 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5bf2198c-0b81-47ea-8a99-4d068b1156ed" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/warning-ico.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/sxs/pojo/PageInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/sxs/constant/Constant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sxs/constant/Constant.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/sxs/mapper/GoodsNumMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sxs/mapper/GoodsNumMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/sxs/mapper/InOrderMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sxs/mapper/InOrderMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/sxs/mapper/OutOrderMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sxs/mapper/OutOrderMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/sxs/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sxs/mapper/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/sxs/serviceImpl/GoodsNumServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sxs/serviceImpl/GoodsNumServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/sxs/serviceImpl/GoodsNumServiceInf.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sxs/serviceInf/GoodsNumServiceInf.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/sxs/serviceImpl/InOrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sxs/serviceImpl/InOrderServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/sxs/serviceImpl/OutOrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sxs/serviceImpl/OutOrderServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/sxs/serviceImpl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sxs/serviceImpl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/sxs/serviceInf/InOrderServiceInf.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sxs/serviceInf/InOrderServiceInf.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/sxs/serviceInf/OutOrderServiceInf.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sxs/serviceInf/OutOrderServiceInf.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/sxs/serviceInf/UserServiceInf.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sxs/serviceInf/UserServiceInf.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/sxs/servlet/BaseInOrderManage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sxs/servlet/BaseInOrderManage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/sxs/servlet/BaseOutOrderManage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sxs/servlet/BaseOutOrderManage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/sxs/servlet/GoodsNumManage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sxs/servlet/GoodsNumManage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/sxs/servlet/InOrderManage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sxs/servlet/InOrderManage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/sxs/servlet/OutOrderManage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sxs/servlet/OutOrderManage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/sxs/servlet/UserManage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sxs/servlet/UserManage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/sxs/test/mappertest/GoodsNumMapperTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sxs/test/mappertest/GoodsNumMapperTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/sxs/constant/Constant.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/sxs/constant/Constant.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/sxs/mapper/GoodsNumMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/sxs/mapper/GoodsNumMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/sxs/mapper/InOrderMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/sxs/mapper/InOrderMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/sxs/mapper/UserMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/sxs/mapper/UserMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/sxs/serviceImpl/GoodsNumServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/sxs/serviceImpl/GoodsNumServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/sxs/serviceImpl/GoodsNumServiceInf.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/sxs/serviceImpl/InOrderServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/sxs/serviceImpl/InOrderServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/sxs/serviceImpl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/sxs/serviceImpl/UserServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/sxs/serviceInf/InOrderServiceInf.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/sxs/serviceInf/InOrderServiceInf.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/sxs/serviceInf/UserServiceInf.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/sxs/serviceInf/UserServiceInf.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/sxs/servlet/GoodsNumManage.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/sxs/servlet/GoodsNumManage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/baseModule/top.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/baseModule/top.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/sxs/servlet/InOrderManage.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/sxs/servlet/InOrderManage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/sxs/servlet/UserManage.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/sxs/servlet/UserManage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/sxs/test/mappertest/GoodsNumMapperTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/sxs/test/mappertest/GoodsNumMapperTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/css/managestyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/managestyle.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/goodsnummanage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/goodsnummanage.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/inorderInfo.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/inorderInfo.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/inorderbase.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/inorderbase.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/login.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/outorderInfo.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/outorderInfo.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/outorderbase.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/outorderbase.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/usermanage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/usermanage.jsp" afterDir="false" />
@@ -85,7 +106,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -112,6 +133,22 @@
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.index.jsp">
+    <configuration name="GoodsNumMapperTest.selWithPageIndex" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ManageSystem" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sxs.test.mappertest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.sxs.test.mappertest" />
+      <option name="MAIN_CLASS_NAME" value="com.sxs.test.mappertest.GoodsNumMapperTest" />
+      <option name="METHOD_NAME" value="selWithPageIndex" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="InOrderMapperTest.isDel" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ManageSystem" />
       <extension name="coverage">
@@ -205,6 +242,7 @@
       </deployment>
       <server-settings>
         <option name="BASE_DIRECTORY_NAME" value="Unnamed_ManagerSystem_4" />
+        <option name="JNDI_PORT" value="3366" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -346,11 +384,13 @@
       <item itemvalue="JUnit.OutOrderMapperTest.selBaseOutOrderById" />
       <item itemvalue="JUnit.InOrderMapperTest.isDel" />
       <item itemvalue="JUnit.OutOrderMapperTest.isDel" />
+      <item itemvalue="JUnit.GoodsNumMapperTest.selWithPageIndex" />
       <item itemvalue="Tomcat Server.login.jsp" />
       <item itemvalue="Tomcat Server.index.jsp" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.GoodsNumMapperTest.selWithPageIndex" />
         <item itemvalue="JUnit.OutOrderMapperTest.isDel" />
         <item itemvalue="JUnit.InOrderMapperTest.isDel" />
         <item itemvalue="JUnit.OutOrderMapperTest.selBaseOutOrderById" />
@@ -362,7 +402,7 @@
     <option name="viewStates">
       <list>
         <serviceView>
-          <option name="contentProportion" value="0.09004093" />
+          <option name="contentProportion" value="0.1398363" />
           <treeState>
             <expand>
               <path>
@@ -372,7 +412,12 @@
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="Finished" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Running" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Failed" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               </path>
             </expand>
             <select />
@@ -427,6 +472,12 @@
       <workItem from="1590724508830" duration="3892000" />
       <workItem from="1590797065964" duration="49000" />
       <workItem from="1590799346298" duration="27923000" />
+      <workItem from="1590889336275" duration="118000" />
+      <workItem from="1590890557206" duration="6104000" />
+      <workItem from="1590896849049" duration="122000" />
+      <workItem from="1590896988251" duration="61000" />
+      <workItem from="1590897298998" duration="305000" />
+      <workItem from="1590897607274" duration="10216000" />
     </task>
     <servers />
   </component>
@@ -442,18 +493,18 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="360" y="70" key="#Web_Browsers/0.0.1536.824@0.0.1536.824" timestamp="1589725400619" />
-    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1590818745131">
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1590898733300">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1590818745131" />
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1590898733300" />
     <state x="93" y="93" width="1350" height="638" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1590144827273">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="93" y="93" width="1350" height="638" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1536.824@0.0.1536.824" timestamp="1590144827273" />
-    <state x="559" y="96" key="#com.intellij.ide.util.MemberChooser" timestamp="1590465005678">
+    <state x="559" y="96" key="#com.intellij.ide.util.MemberChooser" timestamp="1590908317711">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="559" y="96" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1590465005678" />
+    <state x="559" y="96" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1590908317711" />
     <state x="499" y="188" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1589896996670">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -466,78 +517,78 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="167" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog/0.0.1536.824@0.0.1536.824" timestamp="1589330310114" />
-    <state x="355" y="154" key="FileChooserDialogImpl" timestamp="1590818741009">
+    <state x="355" y="154" key="FileChooserDialogImpl" timestamp="1590891559435">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="355" y="154" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1590818741009" />
-    <state width="1333" height="272" key="GridCell.Tab.0.bottom" timestamp="1590827913065">
+    <state x="355" y="154" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1590891559435" />
+    <state width="1260" height="126" key="GridCell.Tab.0.bottom" timestamp="1590909056367">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1333" height="272" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1590827913065" />
-    <state width="1333" height="272" key="GridCell.Tab.0.center" timestamp="1590827913065">
+    <state width="1260" height="126" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1590909056367" />
+    <state width="1260" height="126" key="GridCell.Tab.0.center" timestamp="1590909056367">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1333" height="272" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1590827913065" />
-    <state width="1333" height="272" key="GridCell.Tab.0.left" timestamp="1590827913064">
+    <state width="1260" height="126" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1590909056367" />
+    <state width="1260" height="126" key="GridCell.Tab.0.left" timestamp="1590909056367">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1333" height="272" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1590827913064" />
-    <state width="1333" height="272" key="GridCell.Tab.0.right" timestamp="1590827913065">
+    <state width="1260" height="126" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1590909056367" />
+    <state width="1260" height="126" key="GridCell.Tab.0.right" timestamp="1590909056367">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1333" height="272" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1590827913065" />
-    <state width="1333" height="272" key="GridCell.Tab.1.bottom" timestamp="1590827913065">
+    <state width="1260" height="126" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1590909056367" />
+    <state width="1260" height="126" key="GridCell.Tab.1.bottom" timestamp="1590909056305">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1333" height="272" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1590827913065" />
-    <state width="1333" height="272" key="GridCell.Tab.1.center" timestamp="1590827913065">
+    <state width="1260" height="126" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1590909056305" />
+    <state width="1260" height="126" key="GridCell.Tab.1.center" timestamp="1590909056305">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1333" height="272" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1590827913065" />
-    <state width="1333" height="272" key="GridCell.Tab.1.left" timestamp="1590827913065">
+    <state width="1260" height="126" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1590909056305" />
+    <state width="1260" height="126" key="GridCell.Tab.1.left" timestamp="1590909056304">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1333" height="272" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1590827913065" />
-    <state width="1333" height="272" key="GridCell.Tab.1.right" timestamp="1590827913065">
+    <state width="1260" height="126" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1590909056304" />
+    <state width="1260" height="126" key="GridCell.Tab.1.right" timestamp="1590909056305">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1333" height="272" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1590827913065" />
-    <state width="1333" height="272" key="GridCell.Tab.2.bottom" timestamp="1590827913065">
+    <state width="1260" height="126" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1590909056305" />
+    <state width="1260" height="126" key="GridCell.Tab.2.bottom" timestamp="1590909056305">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1333" height="272" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1590827913065" />
-    <state width="1333" height="272" key="GridCell.Tab.2.center" timestamp="1590827913065">
+    <state width="1260" height="126" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1590909056305" />
+    <state width="1260" height="126" key="GridCell.Tab.2.center" timestamp="1590909056305">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1333" height="272" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1590827913065" />
-    <state width="1333" height="272" key="GridCell.Tab.2.left" timestamp="1590827913065">
+    <state width="1260" height="126" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1590909056305" />
+    <state width="1260" height="126" key="GridCell.Tab.2.left" timestamp="1590909056305">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1333" height="272" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1590827913065" />
-    <state width="1333" height="272" key="GridCell.Tab.2.right" timestamp="1590827913065">
+    <state width="1260" height="126" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1590909056305" />
+    <state width="1260" height="126" key="GridCell.Tab.2.right" timestamp="1590909056305">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1333" height="272" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1590827913065" />
-    <state width="1295" height="139" key="GridCell.Tab.3.bottom" timestamp="1589804441020">
+    <state width="1260" height="126" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1590909056305" />
+    <state width="1300" height="369" key="GridCell.Tab.3.bottom" timestamp="1590897030327">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1295" height="139" key="GridCell.Tab.3.bottom/0.0.1536.824@0.0.1536.824" timestamp="1589804441020" />
-    <state width="1295" height="139" key="GridCell.Tab.3.center" timestamp="1589804441020">
+    <state width="1300" height="369" key="GridCell.Tab.3.bottom/0.0.1536.824@0.0.1536.824" timestamp="1590897030327" />
+    <state width="1300" height="369" key="GridCell.Tab.3.center" timestamp="1590897030326">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1295" height="139" key="GridCell.Tab.3.center/0.0.1536.824@0.0.1536.824" timestamp="1589804441020" />
-    <state width="1295" height="139" key="GridCell.Tab.3.left" timestamp="1589804441020">
+    <state width="1300" height="369" key="GridCell.Tab.3.center/0.0.1536.824@0.0.1536.824" timestamp="1590897030326" />
+    <state width="1300" height="369" key="GridCell.Tab.3.left" timestamp="1590897030326">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1295" height="139" key="GridCell.Tab.3.left/0.0.1536.824@0.0.1536.824" timestamp="1589804441020" />
-    <state width="1295" height="139" key="GridCell.Tab.3.right" timestamp="1589804441020">
+    <state width="1300" height="369" key="GridCell.Tab.3.left/0.0.1536.824@0.0.1536.824" timestamp="1590897030326" />
+    <state width="1300" height="369" key="GridCell.Tab.3.right" timestamp="1590897030326">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1295" height="139" key="GridCell.Tab.3.right/0.0.1536.824@0.0.1536.824" timestamp="1589804441020" />
-    <state x="103" y="85" width="1038" height="707" key="SettingsEditor" timestamp="1590479442021">
+    <state width="1300" height="369" key="GridCell.Tab.3.right/0.0.1536.824@0.0.1536.824" timestamp="1590897030326" />
+    <state x="103" y="85" width="1038" height="707" key="SettingsEditor" timestamp="1590891582292">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="103" y="85" width="1038" height="707" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1590479442021" />
+    <state x="103" y="85" width="1038" height="707" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1590891582292" />
     <state x="359" y="23" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1589594300761">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -554,21 +605,32 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="178" key="extract.method.dialog/0.0.1536.824@0.0.1536.824" timestamp="1590217601092" />
-    <state x="2" y="33" key="new project wizard" timestamp="1590797112004">
+    <state x="2" y="33" key="new project wizard" timestamp="1590889452578">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="2" y="33" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1590797112004" />
-    <state x="464" y="41" key="refactoring.ChangeSignatureDialog" timestamp="1590398715487">
+    <state x="2" y="33" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1590889452578" />
+    <state x="464" y="41" key="refactoring.ChangeSignatureDialog" timestamp="1590907542360">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="464" y="41" key="refactoring.ChangeSignatureDialog/0.0.1536.824@0.0.1536.824" timestamp="1590398715487" />
+    <state x="464" y="41" key="refactoring.ChangeSignatureDialog/0.0.1536.824@0.0.1536.824" timestamp="1590907542360" />
     <state x="425" y="187" width="672" height="677" key="run.anything.popup" timestamp="1590809419749">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="425" y="187" width="672" height="677" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1590809419749" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1590827315220">
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1590908785202">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1590827315220" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1590908785202" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/sxs/servlet/GoodsNumManage.java</url>
+          <line>74</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -2,6 +2,7 @@ package com.sxs.serviceInf;
 
 import com.sxs.pojo.BaseOutOrder;
 import com.sxs.pojo.OutOrderInfo;
+import com.sxs.pojo.PageInfo;
 
 import java.util.List;
 
@@ -57,4 +58,14 @@ public interface OutOrderServiceInf {
      * 通过id查询入库单基本信息
      */
     public BaseOutOrder selBaseOutOrderById(BaseOutOrder baseOutOrder);
+
+    /**
+     * 分页查询出库单基本信息
+     */
+    public PageInfo<BaseOutOrder> selBaseOutOrderWithPageIndex(int pageIndex);
+
+    /**
+     * 分页查询出库单详情
+     */
+    public PageInfo<OutOrderInfo> selOutOrderWithPageIndex(int pageIndex);
 }

@@ -68,3 +68,8 @@ html,body{
     width: 60%;
     z-index: 10000;
 }
+
+.pageIndex{
+    display: flex;
+    justify-content: center;
+}

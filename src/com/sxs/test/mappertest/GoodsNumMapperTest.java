@@ -56,4 +56,9 @@ public class GoodsNumMapperTest {
         assertEquals(false, mapper.isDel(new GoodsNum(1)));
         assertEquals(true, mapper.isDel(new GoodsNum(3)));
     }
+
+    @Test
+    public void selWithPageIndex(){
+        System.out.println(mapper.selWithPageIndex(2));
+    }
 }

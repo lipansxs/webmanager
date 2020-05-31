@@ -1,5 +1,7 @@
 package com.sxs.serviceInf;
 
+import com.sxs.pojo.GoodsNum;
+import com.sxs.pojo.PageInfo;
 import com.sxs.pojo.User;
 
 import java.util.List;
@@ -34,5 +36,10 @@ public interface UserServiceInf {
      * 查询所有用户
      */
     public List<User> selAll();
+
+    /**
+     * 通过页面当前页面数来查询
+     */
+    public PageInfo<User> selWithPageIndex(int pageIndex);
 
 }

@@ -42,5 +42,10 @@ public class Constant {
      */
     public static final int DB_UPDATE_FAILED = 8;
 
+    /**
+     * 页面显示数据的数目
+     */
+    public static final int PAGE_SIZE = 5;
+
 
 }

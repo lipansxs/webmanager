@@ -56,8 +56,14 @@ public class InOrderManage extends HttpServlet {
             }
         }
 
+        int pageIndex = 1;
+        if (null != req.getParameter("pageIndex")) {
+            pageIndex = (int)Double.parseDouble(req.getParameter("pageIndex"));
+        }
+        req.setAttribute("pageInfo", service.selInOrderWithPageIndex(pageIndex));
 
-        req.setAttribute("inorders", service.selAllInOrder());
+
+//        req.setAttribute("inorders", service.selAllInOrder());
         try {
             req.getRequestDispatcher("/inorderInfo.jsp").forward(req, resp);
             return;

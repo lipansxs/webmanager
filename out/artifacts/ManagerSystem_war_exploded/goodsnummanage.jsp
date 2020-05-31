@@ -177,8 +177,8 @@
                     </c:if>
 
                     <%--查询所有的货号数据--%>
-                    <c:if test="${goodsnums != null}">
-                        <c:forEach items="${goodsnums}" var="goodsnum">
+                    <c:if test="${pageInfo != null}">
+                        <c:forEach items="${pageInfo.pageList}" var="goodsnum">
                             <tr>
                                 <td>${goodsnum.id}</td>
                                 <td>${goodsnum.goodsNum}
@@ -192,7 +192,6 @@
                             </tr>
                         </c:forEach>
                     </c:if>
-
 
                     <%--点击删除弹出的模态框--%>
                     <div class="modal fade bs-example-modal-sm" id="del-modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
@@ -289,6 +288,33 @@
                         });
                     </script>
                 </table>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <div class="pageIndex">
+                    <nav aria-label="Page navigation">
+                        <ul class="pagination">
+                            <c:forEach begin="1" end="${pageInfo.totalPageCount}" varStatus="status">
+                                <c:if test="${status.first}">
+                                    <li>
+                                        <a href="/ManageSystem/goodsnum?pageIndex=${pageInfo.pageIndex - 1 < 1? 1: pageInfo.pageIndex - 1}" aria-label="Previous">上一页</a>
+                                    </li>
+                                </c:if>
+
+                                <li class="${status.index == pageInfo.pageIndex? "active": ""}"><a href="/ManageSystem/goodsnum?pageIndex=${status.index}">${status.index}</a></li>
+
+                                <c:if test="${status.last}">
+                                    <li>
+                                        <a href="/ManageSystem/goodsnum?pageIndex=${pageInfo.pageIndex + 1 > pageInfo.totalPageCount? pageInfo.totalPageCount: pageInfo.pageIndex + 1}" aria-label="Next">下一页</a>
+                                    </li>
+                                </c:if>
+                            </c:forEach>
+
+                        </ul>
+                    </nav>
+                </div>
             </div>
         </div>
 

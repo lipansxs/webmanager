@@ -81,8 +81,17 @@ public class GoodsNumManage extends HttpServlet {
             }
         }
 
-        // 默认情况下查询所有的货号数据
-        req.setAttribute("goodsnums", service.selAllGoodsNum());
+
+        // 获取当前页面的当前页的页数
+        // 默认情况下查询第一页所有的货号数据
+        int pageIndex = 1;
+        if (null != req.getParameter("pageIndex")) {
+            pageIndex = (int)Double.parseDouble(req.getParameter("pageIndex"));
+        }
+
+//        req.setAttribute("goodsnums", service.selAllGoodsNum());
+        req.setAttribute("pageInfo", service.selWithPageIndex(pageIndex));
+
         try {
             req.getRequestDispatcher("/goodsnummanage.jsp").forward(req, resp);
             return;

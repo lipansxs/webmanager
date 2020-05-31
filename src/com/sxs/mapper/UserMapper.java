@@ -1,6 +1,8 @@
 package com.sxs.mapper;
 
 import com.sxs.constant.Constant;
+import com.sxs.pojo.GoodsNum;
+import com.sxs.pojo.PageInfo;
 import com.sxs.pojo.User;
 import com.sxs.util.JDBCUtil;
 import org.apache.log4j.Logger;
@@ -372,5 +374,59 @@ public class UserMapper {
         User user = new User();
         user.setName(name);
         return this.isDel(user);
+    }
+
+    /**
+     * 通过分页查询数据,默认每页显示5条数据
+     */
+    public PageInfo<User> selWithPageIndex(int pageIndex){
+        //
+        PageInfo<User> pageInfo = new PageInfo<>();
+        pageInfo.setPageIndex(pageIndex);
+
+        // 设置页面信息的总的页数
+        // 如果总的页面数是0，就查询数据库
+        if (pageInfo.getTotalPageCount() == 0) {
+            pageInfo.setTotalPageCount(SQLOption.selOption("select count(*) from user_tb", null, null, (rowSet)->{
+                double dataCount = 0;
+                try {
+                    dataCount = rowSet.getInt(1);
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }finally {
+                    JDBCUtil.close(rowSet);
+                }
+                // 防止小数
+                return Math.ceil(dataCount/pageInfo.getPageSize());
+            }));
+        }
+
+        return SQLOption.selOption("select * from user_tb limit ?, ?", pageInfo, (ps, page)->{
+
+            try {
+                ps.setInt(1, page.getPageBegin());
+                ps.setInt(2, page.getPageSize());
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }, (rowSet)->{
+            try {
+                rowSet.beforeFirst();
+
+                while (rowSet.next()) {
+                    User user = new User();
+                    user.setId(rowSet.getInt("id"));
+                    user.setName(rowSet.getString("username"));
+                    user.setPwd(rowSet.getString("pwd"));
+                    pageInfo.addPageConent(user);
+                }
+
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }finally {
+                JDBCUtil.close(rowSet);
+            }
+            return pageInfo;
+        });
     }
 }

@@ -92,7 +92,14 @@ public class UserManage extends HttpServlet {
             }
         }
 
-        req.setAttribute("users", userService.selAll());
+//        req.setAttribute("users", userService.selAll());
+        // 默认显示第一页的数据
+        int pageIndex = 1;
+        if (null != req.getParameter("pageIndex")) {
+            pageIndex = (int)Double.parseDouble(req.getParameter("pageIndex"));
+        }
+        req.setAttribute("pageInfo", userService.selWithPageIndex(pageIndex));
+
         try {
             req.getRequestDispatcher("/usermanage.jsp").forward(req, resp);
         } catch (IOException | ServletException e) {

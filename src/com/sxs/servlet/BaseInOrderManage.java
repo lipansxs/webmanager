@@ -65,7 +65,14 @@ public class BaseInOrderManage extends HttpServlet {
         }
 
         // 默认情况下查询所有基本信息
-        req.setAttribute("inorderBases", service.selAllBaseInOrder());
+//        req.setAttribute("inorderBases", service.selAllBaseInOrder());
+
+        // 默认显示第一页数据
+        int pageIndex = 1;
+        if (null != req.getParameter("pageIndex")) {
+            pageIndex = (int)Double.parseDouble(req.getParameter("pageIndex"));
+        }
+        req.setAttribute("pageInfo", service.selBaseInOrderWithPageIndex(pageIndex));
 
 
         try {
