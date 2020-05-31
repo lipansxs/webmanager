@@ -257,7 +257,7 @@
                                 <div class="modal-content">
                                     <div class="modal-header">
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                        <h4 class="modal-title" id="updmodaltitle" style="color: black">编辑入库单基本信息</h4>
+                                        <h4 class="modal-title" id="updmodaltitle" style="color: black">编辑出库单基本信息</h4>
                                     </div>
                                     <form method="post" action="<%=request.getContextPath()%>/baseoutorder/upd">
                                         <div class="modal-body">
@@ -336,6 +336,21 @@
                 </table>
             </div>
         </div>
+
+        <script>
+            $(function () {
+                $(".base-outorder-tb tbody tr").click(function () {
+                    let goodsName = $(this).find("td:nth-child(2)").text().trim();
+                    let trueOutCount = $(this).find("td:nth-child(3)").text().trim();
+                    let totalPrice = $(this).find("td:nth-child(4)").clone().children().remove().end().text().trim();
+
+                    $("#updmodal #upd-goods-name").val(goodsName);
+                    $("#updmodal #upd-true-in-count").val(trueOutCount);
+                    $("#updmodal #upd-total-price").val(totalPrice);
+
+                });
+            });
+        </script>
 
         <div class="row">
             <div class="col-md-10 col-md-offset-1">

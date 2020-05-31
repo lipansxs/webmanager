@@ -338,6 +338,16 @@
             </div>
         </div>
 
+        <script>
+            $(function(){
+                $(".users-tb tbody tr").click(function () {
+
+                    let userName = $(this).find("td:nth-child(2)").text();
+                    $("#updmodal #upd-name").val(userName);
+                });
+            });
+        </script>
+
 
         <div class="row">
             <div class="col-md-10 col-md-offset-1">

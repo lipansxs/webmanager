@@ -268,7 +268,7 @@
                                 <div class="modal-content">
                                     <div class="modal-header">
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                        <h4 class="modal-title" id="updmodaltitle" style="color: black">编辑入库单基本信息</h4>
+                                        <h4 class="modal-title" id="updmodaltitle" style="color: black">编辑出库单基本信息</h4>
                                     </div>
                                     <form method="post" action="<%=request.getContextPath()%>/outorderdetail/upd">
                                         <div class="modal-body">
@@ -327,7 +327,7 @@
                                             </div>
 
                                             <div class="form-group">
-                                                <label for="upd-in-count" class="control-label">进货数目</label>
+                                                <label for="upd-in-count" class="control-label">出货数目</label>
                                                 <input type="text" class="form-control" id="upd-in-count" name="upd-in-count">
                                             </div>
 
@@ -379,6 +379,28 @@
                 </table>
             </div>
         </div>
+
+        <script>
+            $(function () {
+                $(".outorder-tb tbody tr").click(function () {
+                    let goodsId = $(this).find("td:nth-child(2)").text();
+                    let count = $(this).find("td:nth-child(3)").text();
+                    let price = $(this).find("td:nth-child(4)").text();
+                    let buy = $(this).find("td:nth-child(6)").text();
+                    let sale = $(this).find("td:nth-child(7)").text();
+                    let goodsName = $(this).find("td:nth-child(9)").clone().children().remove().end().text().trim();
+
+                    $("#updmodal #upd-goods-id").val(goodsId);
+                    $("#updmodal #upd-in-count").val(count);
+                    $("#updmodal #upd-goods-price").val(price);
+                    $("#updmodal #upd-goods-buy").val(buy);
+                    $("#updmodal #upd-goods-sale").val(sale);
+                    $("#updmodal #upd-goods-name").val(goodsName);
+
+
+                });
+            });
+        </script>
 
         <div class="row">
             <div class="col-md-10 col-md-offset-1">

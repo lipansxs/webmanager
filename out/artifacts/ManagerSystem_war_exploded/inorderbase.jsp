@@ -354,6 +354,20 @@
             </div>
         </div>
 
+        <script>
+            $(function () {
+                $(".base-inorder-tb tbody tr").click(function(){
+                    let goodsName = $(this).find("td:nth-child(2)").text();
+                    let trueInCount = $(this).find("td:nth-child(3)").text();
+                    let totalPrice = $(this).find("td:nth-child(4)").clone().children().remove().end().text().trim();
+
+                    $("#updmodal #upd-goods-name").val(goodsName);
+                    $("#updmodal #upd-true-in-count").val(trueInCount);
+                    $("#updmodal #upd-total-price").val(totalPrice);
+                });
+            });
+        </script>
+
         <div class="row">
             <div class="col-md-10 col-md-offset-1">
                 <div class="pageIndex">

@@ -147,6 +147,7 @@
             </div>
         </div>
 
+
         <div class="row">
             <div class="col-md-10 col-md-offset-1 goods-num-tb">
 
@@ -158,6 +159,7 @@
 <%--                        <td class="col-md-3">用户密码</td>--%>
                     </tr>
                     </thead>
+
                     <tbody>
 
                     <%--查询的货号数据--%>
@@ -217,7 +219,6 @@
                                 });
 
                             });
-
                         });
                     </script>
 
@@ -239,6 +240,8 @@
                                         <%--设置编辑的数据的id--%>
                                         <script type="text/javascript">
                                             $(function () {
+
+
                                                 $(".goods-num-tb tbody tr .option a:first-child").click(function () {
                                                     let id = $(this).find("span").text(); // 获取点击编辑按钮的数据的id
                                                     $("#updmodal .modal-body .form-group:first input").val(id);
@@ -254,6 +257,7 @@
                                                     });
 
                                                 });
+
                                             });
                                         </script>
 
@@ -290,6 +294,15 @@
                 </table>
             </div>
         </div>
+
+        <script>
+            $(function(){
+                $(".goods-num-tb tbody tr").click(function () {
+                    let goods_num = $(this).find("td:nth-child(2)").clone().children().remove().end().text();
+                    $("#updmodal #upd-name").val(goods_num.trim());
+                });
+            });
+        </script>
 
         <div class="row">
             <div class="col-md-10 col-md-offset-1">

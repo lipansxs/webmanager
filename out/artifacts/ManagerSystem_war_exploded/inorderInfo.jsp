@@ -381,6 +381,28 @@
             </div>
         </div>
 
+        <script>
+            $(".inorder-detail-tb tbody tr").click(function () {
+                let goodsName = $(this).find("td:nth-child(2)").text();
+                let goodsNum = $(this).find("td:nth-child(3)").text();
+                let inCount = $(this).find("td:nth-child(4)").text();
+                let trueIncount = $(this).find("td:nth-child(5)").text();
+                let price = $(this).find("td:nth-child(7)").text();
+                let buy = $(this).find("td:nth-child(9)").text();
+                let sale = $(this).find("td:nth-child(10)").clone().children().remove().end().text().trim();
+
+                $("#updmodal #upd-goods-name").val(goodsName);
+                $("#updmodal #upd-goods-id").val(goodsNum);
+                $("#updmodal #upd-in-count").val(inCount);
+                $("#updmodal #upd-true-in-count").val(trueIncount);
+                $("#updmodal #upd-goods-price").val(price);
+                $("#updmodal #upd-goods-buy").val(buy);
+                $("#updmodal #upd-goods-sale").val(sale);
+
+
+            });
+        </script>
+
         <div class="row">
             <div class="col-md-10 col-md-offset-1">
                 <div class="pageIndex">

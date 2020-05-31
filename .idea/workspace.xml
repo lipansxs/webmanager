@@ -7,42 +7,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5bf2198c-0b81-47ea-8a99-4d068b1156ed" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/sxs/pojo/PageInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/sxs/constant/Constant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sxs/constant/Constant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/sxs/mapper/GoodsNumMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sxs/mapper/GoodsNumMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/sxs/mapper/InOrderMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sxs/mapper/InOrderMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/sxs/mapper/OutOrderMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sxs/mapper/OutOrderMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/sxs/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sxs/mapper/UserMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/sxs/serviceImpl/GoodsNumServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sxs/serviceImpl/GoodsNumServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/sxs/serviceImpl/GoodsNumServiceInf.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sxs/serviceInf/GoodsNumServiceInf.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/sxs/serviceImpl/InOrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sxs/serviceImpl/InOrderServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/sxs/serviceImpl/OutOrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sxs/serviceImpl/OutOrderServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/sxs/serviceImpl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sxs/serviceImpl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/sxs/serviceInf/InOrderServiceInf.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sxs/serviceInf/InOrderServiceInf.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/sxs/serviceInf/OutOrderServiceInf.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sxs/serviceInf/OutOrderServiceInf.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/sxs/serviceInf/UserServiceInf.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sxs/serviceInf/UserServiceInf.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/sxs/servlet/BaseInOrderManage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sxs/servlet/BaseInOrderManage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/sxs/servlet/BaseOutOrderManage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sxs/servlet/BaseOutOrderManage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/sxs/servlet/GoodsNumManage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sxs/servlet/GoodsNumManage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/sxs/servlet/InOrderManage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sxs/servlet/InOrderManage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/sxs/servlet/OutOrderManage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sxs/servlet/OutOrderManage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/sxs/servlet/UserManage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sxs/servlet/UserManage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/sxs/test/mappertest/GoodsNumMapperTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sxs/test/mappertest/GoodsNumMapperTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/sxs/constant/Constant.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/sxs/constant/Constant.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/sxs/mapper/GoodsNumMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/sxs/mapper/GoodsNumMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/sxs/mapper/InOrderMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/sxs/mapper/InOrderMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/sxs/mapper/UserMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/sxs/mapper/UserMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/sxs/serviceImpl/GoodsNumServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/sxs/serviceImpl/GoodsNumServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/sxs/serviceImpl/GoodsNumServiceInf.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/sxs/serviceImpl/InOrderServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/sxs/serviceImpl/InOrderServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/sxs/serviceImpl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/sxs/serviceImpl/UserServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/sxs/serviceInf/InOrderServiceInf.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/sxs/serviceInf/InOrderServiceInf.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/sxs/serviceInf/UserServiceInf.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/sxs/serviceInf/UserServiceInf.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/sxs/servlet/GoodsNumManage.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/sxs/servlet/GoodsNumManage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/sxs/servlet/InOrderManage.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/sxs/servlet/InOrderManage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/sxs/servlet/UserManage.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/sxs/servlet/UserManage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/com/sxs/test/mappertest/GoodsNumMapperTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/sxs/test/mappertest/GoodsNumMapperTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/css/managestyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/managestyle.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/goodsnummanage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/goodsnummanage.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/inorderInfo.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/inorderInfo.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/inorderbase.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/inorderbase.jsp" afterDir="false" />
@@ -54,6 +18,20 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
   </component>
   <component name="FavoritesManager">
     <favorites_list name="ManageSystem" />
@@ -412,12 +390,7 @@
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="Running" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="Failed" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Finished" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               </path>
             </expand>
             <select />
@@ -477,7 +450,9 @@
       <workItem from="1590896849049" duration="122000" />
       <workItem from="1590896988251" duration="61000" />
       <workItem from="1590897298998" duration="305000" />
-      <workItem from="1590897607274" duration="10216000" />
+      <workItem from="1590897607274" duration="10395000" />
+      <workItem from="1590909717299" duration="6110000" />
+      <workItem from="1590916505008" duration="2280000" />
     </task>
     <servers />
   </component>
@@ -521,54 +496,54 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="355" y="154" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1590891559435" />
-    <state width="1260" height="126" key="GridCell.Tab.0.bottom" timestamp="1590909056367">
+    <state width="1260" height="149" key="GridCell.Tab.0.bottom" timestamp="1590919053290">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1260" height="126" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1590909056367" />
-    <state width="1260" height="126" key="GridCell.Tab.0.center" timestamp="1590909056367">
+    <state width="1260" height="149" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1590919053290" />
+    <state width="1260" height="149" key="GridCell.Tab.0.center" timestamp="1590919053289">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1260" height="126" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1590909056367" />
-    <state width="1260" height="126" key="GridCell.Tab.0.left" timestamp="1590909056367">
+    <state width="1260" height="149" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1590919053289" />
+    <state width="1260" height="149" key="GridCell.Tab.0.left" timestamp="1590919053289">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1260" height="126" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1590909056367" />
-    <state width="1260" height="126" key="GridCell.Tab.0.right" timestamp="1590909056367">
+    <state width="1260" height="149" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1590919053289" />
+    <state width="1260" height="149" key="GridCell.Tab.0.right" timestamp="1590919053290">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1260" height="126" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1590909056367" />
-    <state width="1260" height="126" key="GridCell.Tab.1.bottom" timestamp="1590909056305">
+    <state width="1260" height="149" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1590919053290" />
+    <state width="1260" height="149" key="GridCell.Tab.1.bottom" timestamp="1590919053290">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1260" height="126" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1590909056305" />
-    <state width="1260" height="126" key="GridCell.Tab.1.center" timestamp="1590909056305">
+    <state width="1260" height="149" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1590919053290" />
+    <state width="1260" height="149" key="GridCell.Tab.1.center" timestamp="1590919053290">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1260" height="126" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1590909056305" />
-    <state width="1260" height="126" key="GridCell.Tab.1.left" timestamp="1590909056304">
+    <state width="1260" height="149" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1590919053290" />
+    <state width="1260" height="149" key="GridCell.Tab.1.left" timestamp="1590919053290">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1260" height="126" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1590909056304" />
-    <state width="1260" height="126" key="GridCell.Tab.1.right" timestamp="1590909056305">
+    <state width="1260" height="149" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1590919053290" />
+    <state width="1260" height="149" key="GridCell.Tab.1.right" timestamp="1590919053290">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1260" height="126" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1590909056305" />
-    <state width="1260" height="126" key="GridCell.Tab.2.bottom" timestamp="1590909056305">
+    <state width="1260" height="149" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1590919053290" />
+    <state width="1260" height="149" key="GridCell.Tab.2.bottom" timestamp="1590919053290">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1260" height="126" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1590909056305" />
-    <state width="1260" height="126" key="GridCell.Tab.2.center" timestamp="1590909056305">
+    <state width="1260" height="149" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1590919053290" />
+    <state width="1260" height="149" key="GridCell.Tab.2.center" timestamp="1590919053290">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1260" height="126" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1590909056305" />
-    <state width="1260" height="126" key="GridCell.Tab.2.left" timestamp="1590909056305">
+    <state width="1260" height="149" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1590919053290" />
+    <state width="1260" height="149" key="GridCell.Tab.2.left" timestamp="1590919053290">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1260" height="126" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1590909056305" />
-    <state width="1260" height="126" key="GridCell.Tab.2.right" timestamp="1590909056305">
+    <state width="1260" height="149" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1590919053290" />
+    <state width="1260" height="149" key="GridCell.Tab.2.right" timestamp="1590919053290">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1260" height="126" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1590909056305" />
+    <state width="1260" height="149" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1590919053290" />
     <state width="1300" height="369" key="GridCell.Tab.3.bottom" timestamp="1590897030327">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
