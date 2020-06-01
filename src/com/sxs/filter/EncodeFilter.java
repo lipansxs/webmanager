@@ -17,6 +17,7 @@ public class EncodeFilter implements Filter {
 
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
+        //chain.doFilter(req, resp);
         // 转换类型
         HttpServletRequest req = (HttpServletRequest)servletRequest;
 

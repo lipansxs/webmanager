@@ -36,7 +36,7 @@ public class GoodsNumManage extends HttpServlet {
 
 
     private void processRequest(HttpServletRequest req, HttpServletResponse resp){
-
+        //chain.doFilter(req, resp);
         // 获取请求uri，并且解析请求uri的操作
         String option = ParseUri.parseOption(req.getRequestURI());
 

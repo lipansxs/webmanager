@@ -18,6 +18,11 @@ public class BaseOutOrder {
     private int count;
 
     /**
+     * 单价
+     */
+    private double price;
+
+    /**
      * 总价
      */
     private double totalPrice;
@@ -52,6 +57,14 @@ public class BaseOutOrder {
 
     public void setTotalPrice(double totalPrice) {
         this.totalPrice = totalPrice;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
     }
 
     @Override

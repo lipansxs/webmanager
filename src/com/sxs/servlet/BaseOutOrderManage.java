@@ -144,10 +144,18 @@ public class BaseOutOrderManage extends HttpServlet {
     private BaseOutOrder updSetAttribute(HttpServletRequest req){
         BaseOutOrder order = new BaseOutOrder();
 
-        order.setId(Integer.parseInt(req.getParameter("id")));
-        order.setGoodsName(req.getParameter("upd-goods-name"));
-        order.setCount(Integer.parseInt(req.getParameter("upd-out-count")));
-        order.setTotalPrice(Double.parseDouble(req.getParameter("upd-total-price")));
+        int id = Integer.parseInt(req.getParameter("id"));
+        String goodsName = req.getParameter("upd-goods-name");
+        int count = Integer.parseInt(req.getParameter("upd-out-count"));
+        double totalPrice = Double.parseDouble(req.getParameter("upd-total-price"));
+
+        double price = totalPrice / count;
+
+        order.setId(id);
+        order.setGoodsName(goodsName);
+        order.setCount(count);
+        order.setPrice(price);
+        order.setTotalPrice(totalPrice);
 
         return order;
     }

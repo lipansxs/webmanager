@@ -39,14 +39,16 @@ public class Login extends HttpServlet {
         logger.info(user.getName() + "正在登入");
 
         int loginResult = userService.login(user);
+
         if (loginResult == Constant.LOGIN_SUCCESS){
             logger.info(user.getName() + "登入成功！");
-//            response.sendRedirect(request.getContextPath() + "/index.jsp");
+
+            request.getSession().setAttribute("logging", user.getName());
             request.getRequestDispatcher("/index.jsp").forward(request, response);
             return;
         }
-//        request.getRequestDispatcher("/WEB-INF/error/LogginError.jsp?loginresult=" + loginResult).forward(request, response);
-        response.sendRedirect(request.getContextPath() + "/WEB-INF/error/LogginError.jsp?loginresult=" + loginResult);
+        request.getRequestDispatcher("WEB-INF/error/LogginError.jsp?loginresult=" + loginResult).forward(request, response);
+//        response.sendRedirect( "WEB-INF/error/LogginError.jsp?loginresult=" + loginResult);
     }
 
 }

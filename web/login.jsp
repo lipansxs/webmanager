@@ -75,7 +75,7 @@
 <div class="login-painer">
     <div class="container">
         <span class="title"></span>
-        <form id="login-form" action="login" method="post">
+        <form id="login-form" action="/ManageSystem/login" method="post">
             <input type="text" name="username" class="username" placeholder="用户名">
             <input type="password" name="password" class="password" placeholder="密码">
             <input type="submit" value="登入" class = "login" id="login-btn"><span class="loss-pwd"><a href="#">忘记密码?</a></span>

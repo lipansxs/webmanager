@@ -16,7 +16,7 @@ div.login-painer{
     margin-top: 20%;
     margin-left: 50%;
     transform: translate(-50%, -50%);
-    box-shadow: 0 0 15px red;
+    box-shadow: 0 0 15px gray;
     border-radius: 15px;
 }
 

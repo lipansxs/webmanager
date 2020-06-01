@@ -21,15 +21,26 @@ public class InOrderMapper {
      * @return
      */
     public int updBaseInOrderById(BaseInOrder baseInOrder){
+
+        InOrderInfo order = new InOrderInfo();
+        order.setId(baseInOrder.getId());
+        order = this.selById(order);
+
+        int subCount = order.getInCount() - baseInOrder.getTrueCount();
+
         return SQLOption.updOption("update inorder_tb set goodsname = ?, " +
                 "trueincount = ?," +
-                "totalprice = ? " +
+                "totalprice = ?, " +
+                "price = ?," +
+                "subcount = ? " +
                 "where id = ?", baseInOrder, (ps, pojo)->{
             try {
                 ps.setString(1, pojo.getGoodsName());
                 ps.setInt(2, pojo.getTrueCount());
                 ps.setDouble(3, pojo.getTotalPrice());
-                ps.setInt(4, pojo.getId());
+                ps.setDouble(4, pojo.getPrice());
+                ps.setInt(5, subCount);
+                ps.setInt(6, pojo.getId());
             } catch (SQLException e) {
                 e.printStackTrace();
             }

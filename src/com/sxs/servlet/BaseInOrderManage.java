@@ -175,9 +175,12 @@ public class BaseInOrderManage extends HttpServlet {
             totalPrice = Double.parseDouble(req.getParameter("upd-total-price"));
         }
 
+        double price = totalPrice / trueInCount;
+
         order.setId(id);
         order.setGoodsName(goodsName);
         order.setTrueCount(trueInCount);
+        order.setPrice(price);
         order.setTotalPrice(totalPrice);
 
         return order;

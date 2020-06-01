@@ -187,7 +187,7 @@
                                 <td>${selUser.pwd}
                                     <!-- 编辑删除按钮 -->
                                     <div class="option hidden">
-                                        <a href="#" class="btn btn-primary btn-xs active" data-toggle="modal" data-target="#updmodal" role="button"><span class="hidden">${selUser.id}</span>编辑</a>
+                                        <a href="#" class="btn btn-primary btn-xs ${selUser.name == logging? "active" : "disabled"}" data-toggle="modal" data-target="#updmodal" role="button"><span class="hidden">${selUser.id}</span>编辑</a>
                                         <a href="/usermanage/del?id=${user.id}" class="btn btn-danger btn-xs active delete-btn" data-toggle="modal" data-target=".bs-example-modal-sm" role="button">删除</a>
                                     </div>
                                 </td>
@@ -203,7 +203,7 @@
                                     <td>${user.pwd}
                                         <!-- 编辑删除按钮 -->
                                         <div class="option hidden">
-                                            <a href="#" class="btn btn-primary btn-xs active" data-toggle="modal" data-target="#updmodal" role="button"><span class="hidden">${user.id}</span>编辑</a>
+                                            <a href="#" class="btn btn-primary btn-xs ${user.name == logging? "active" : "disabled"}" data-toggle="modal" data-target="#updmodal" role="button"><span class="hidden">${user.id}</span>编辑</a>
                                             <a href="/usermanage/del?id=${user.id}" class="btn btn-danger btn-xs active delete-btn" data-toggle="modal" data-target=".bs-example-modal-sm" role="button">删除</a>
                                         </div>
                                     </td>

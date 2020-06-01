@@ -20,12 +20,13 @@ public class OutOrderMapper {
      * @return
      */
     public int updBaseOutOrder(BaseOutOrder baseOutOrder){
-        return SQLOption.updOption("update outorder_tb set goodsname = ?, count = ?, totalprice = ? where id = ?", baseOutOrder, (ps, pojo)->{
+        return SQLOption.updOption("update outorder_tb set goodsname = ?, count = ?, totalprice = ?, price = ? where id = ?", baseOutOrder, (ps, pojo)->{
             try {
                 ps.setString(1, pojo.getGoodsName());
                 ps.setInt(2, pojo.getCount());
                 ps.setDouble(3, pojo.getTotalPrice());
-                ps.setInt(4, pojo.getId());
+                ps.setDouble(4, pojo.getPrice());
+                ps.setInt(5, pojo.getId());
             } catch (SQLException e) {
                 e.printStackTrace();
             }
