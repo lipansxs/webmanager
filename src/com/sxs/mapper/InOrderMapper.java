@@ -87,7 +87,7 @@ public class InOrderMapper {
         // 如果总的页面数是0，就查询数据库
         if (pageInfo.getTotalPageCount() == 0) {
             // 设置总的页数
-            pageInfo.setTotalPageCount(SQLOption.selOption("select count(*) from inorder_tb", null, null, (rowSet)->{
+            pageInfo.setTotalPageCount(SQLOption.selOption("select count(*) from inorder_tb where isdel = 0", null, null, (rowSet)->{
                 double dataCount = 0;
                 try {
                     dataCount = rowSet.getInt(1);
@@ -100,7 +100,7 @@ public class InOrderMapper {
             }));
         }
 
-        return SQLOption.selOption("select * from inorder_tb limit ?, ?", pageInfo, (ps, page)->{
+        return SQLOption.selOption("select * from inorder_tb where isdel = 0 limit ?, ?", pageInfo, (ps, page)->{
 
             try {
                 ps.setInt(1, page.getPageBegin());
@@ -285,7 +285,7 @@ public class InOrderMapper {
         // 如果总的页面数是0，就查询数据库
         if (pageInfo.getTotalPageCount() == 0) {
             // 设置总的页数
-            pageInfo.setTotalPageCount(SQLOption.selOption("select count(*) from inorder_tb", null, null, (rowSet)->{
+            pageInfo.setTotalPageCount(SQLOption.selOption("select count(*) from inorder_tb where isdel = 0", null, null, (rowSet)->{
                 double dataCount = 0;
                 try {
                     dataCount = rowSet.getInt(1);
@@ -298,7 +298,7 @@ public class InOrderMapper {
             }));
         }
 
-        return SQLOption.selOption("select * from inorder_tb limit ?, ?", pageInfo, (ps, page)->{
+        return SQLOption.selOption("select * from inorder_tb where isdel = 0 limit ?, ?", pageInfo, (ps, page)->{
 
             try {
                 ps.setInt(1, page.getPageBegin());

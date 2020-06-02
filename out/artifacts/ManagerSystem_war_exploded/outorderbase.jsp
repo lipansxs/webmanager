@@ -51,7 +51,7 @@
                 <div class="search-add bg-success">
 
                     <div class="search">
-                        <form class="form-inline" action="<%= request.getContextPath()%>/outorderdetail/sel">
+                        <form class="form-inline" action="<%= request.getContextPath()%>/baseoutorder/sel">
                             <div class="form-group">
                                 <label class="sr-only" for="id-input">id</label>
                                 <div class="input-group">
@@ -67,8 +67,11 @@
                         // 搜索
                         $(function () {
                             $(".search button").click(function () {
-                                showMsg("请输入搜索内容");
-                                return false;
+
+                                if ($(this).prev("div").find("input[type=text]").val().length == 0) {
+                                    showMsg("请输入搜索内容");
+                                    return false;
+                                }
                             });
                         });
                     </script>
@@ -198,7 +201,7 @@
                                     <!-- 编辑删除按钮 -->
                                     <div class="option hidden">
                                         <a href="#" class="btn btn-primary btn-xs active" data-toggle="modal" data-target="#updmodal" role="button"><span class="hidden">${selOutOrderBase.id}</span>编辑</a>
-                                        <a href="<%= request.getContextPath()%>/inorderdetail/sel?id=${selOutOrderBase.id}" class="btn btn-danger btn-xs active" role="button">查看详情</a>
+                                        <a href="<%= request.getContextPath()%>/outorderdetail/sel?id=${selOutOrderBase.id}" class="btn btn-danger btn-xs active" role="button">查看详情</a>
                                         <a href="/baseoutorder/del?id=${selOutOrderBase.id}" class="btn btn-danger btn-xs active delete-btn" data-toggle="modal" data-target=".bs-example-modal-sm" role="button">删除</a>
                                     </div>
                                 </td>
@@ -216,7 +219,7 @@
                                         <!-- 编辑删除按钮 -->
                                         <div class="option hidden">
                                             <a href="#" class="btn btn-primary btn-xs active" data-toggle="modal" data-target="#updmodal" role="button"><span class="hidden">${outOrderBase.id}</span>编辑</a>
-                                            <a href="<%= request.getContextPath()%>/baseoutorder/sel?id=${outOrderBase.id}" class="btn btn-primary btn-xs active" role="button">查看详情</a>
+                                            <a href="<%= request.getContextPath()%>/outorderdetail/sel?id=${outOrderBase.id}" class="btn btn-primary btn-xs active" role="button">查看详情</a>
                                             <a href="/baseoutorder/del?id=${outOrderBase.id}" class="btn btn-danger btn-xs active delete-btn" data-toggle="modal" data-target=".bs-example-modal-sm" role="button">删除</a>
                                         </div>
                                     </td>

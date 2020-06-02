@@ -222,7 +222,7 @@
                                 <!-- 编辑删除按钮 -->
                                 <div class="option hidden">
                                     <a href="#" class="btn btn-primary btn-xs active" data-toggle="modal" data-target="#updmodal" role="button"><span class="hidden">${selInOrder.id}</span>编辑</a>
-                                    <a href="<%= request.getContextPath()%>/baseinorder/del?id=${selInOrder.id}" class="btn btn-danger btn-xs active" role="button">删除</a>
+                                    <a href="/baseinorder/del?id=${selInOrder.id}" class="btn btn-danger btn-xs active delete-btn" data-toggle="modal" data-target=".bs-example-modal-sm" role="button">删除</a>
                                 </div>
                             </td>
                         </tr>
@@ -245,13 +245,39 @@
                                     <!-- 编辑删除按钮 -->
                                     <div class="option hidden">
                                         <a href="#" class="btn btn-primary btn-xs active" data-toggle="modal" data-target="#updmodal" role="button"><span class="hidden">${inorder.id}</span>编辑</a>
-                                        <a href="<%= request.getContextPath()%>/baseinorder/del?id=${inorder.id}" class="btn btn-danger btn-xs active" role="button">删除</a>
+                                        <a href="/baseinorder/del?id=${inorder.id}" class="btn btn-danger btn-xs active delete-btn" data-toggle="modal" data-target=".bs-example-modal-sm" role="button">删除</a>
                                     </div>
                                 </td>
                             </tr>
 
                         </c:forEach>
                     </c:if>
+
+                    <%--点击删除弹出的模态框--%>
+                    <div class="modal fade bs-example-modal-sm" id="del-modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+                        <div class="modal-dialog modal-sm" role="document">
+                            <div class="modal-content" style="text-align: center">
+                                <h1 style="color: black">确定删除？</h1>
+
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-success" data-dismiss="modal">取消</button>
+                                    <a type="button" class="btn btn-danger confirm-del active" role="button">确定删除</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <script type="text/javascript">
+                        $(function () {
+                            $(".inorder-detail-tb tbody tr .option a:nth-child(2)").click(function () {
+                                let url = $(this).attr("href");
+                                let modal = $("#del-modal .modal-content");
+                                modal.find(".confirm-del").click(function(){
+                                    $(this).attr("href", "/ManageSystem" + url);
+                                });
+                            });
+                        });
+                    </script>
 
                     <div class="modal fade" id="updmodal" tabindex="-1" role="dialog" aria-labelledby="updmodaltitle">
                         <div class="modal-dialog" role="document">

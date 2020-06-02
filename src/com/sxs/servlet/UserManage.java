@@ -70,6 +70,7 @@ public class UserManage extends HttpServlet {
             String pwd = req.getParameter("pwd");
 
             this.updUser(id, name, pwd);
+            req.getSession().setAttribute("logging", name);
 
         }else if (null != option && "sel".equals(option)){ // 查找用户
 
@@ -143,6 +144,7 @@ public class UserManage extends HttpServlet {
     }
 
     public void updUser(int id, String name, String pwd){
+
         User user = new User(id, name, pwd);
         userService.update(user);
     }

@@ -387,7 +387,7 @@ public class UserMapper {
         // 设置页面信息的总的页数
         // 如果总的页面数是0，就查询数据库
         if (pageInfo.getTotalPageCount() == 0) {
-            pageInfo.setTotalPageCount(SQLOption.selOption("select count(*) from user_tb", null, null, (rowSet)->{
+            pageInfo.setTotalPageCount(SQLOption.selOption("select count(*) from user_tb where isdel = 0", null, null, (rowSet)->{
                 double dataCount = 0;
                 try {
                     dataCount = rowSet.getInt(1);
@@ -401,7 +401,7 @@ public class UserMapper {
             }));
         }
 
-        return SQLOption.selOption("select * from user_tb limit ?, ?", pageInfo, (ps, page)->{
+        return SQLOption.selOption("select * from user_tb where isdel = 0 limit ?, ?", pageInfo, (ps, page)->{
 
             try {
                 ps.setInt(1, page.getPageBegin());
